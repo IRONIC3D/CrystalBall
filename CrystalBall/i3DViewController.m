@@ -7,10 +7,11 @@
 //
 
 #import "i3DViewController.h"
+#import "CrystalBall.h"
 
 @interface i3DViewController ()
 
-@property (strong, nonatomic) NSArray *predictions;
+@property (strong, nonatomic) CrystalBall *crystalBall;
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 - (IBAction)buttonPressed:(id)sender;
 
@@ -23,13 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    self.predictions = @[@"It is Certain",
-            @"It is Decidedly so",
-            @"The stars are not aligned",
-            @"My reply is no",
-            @"Better not tell you now",
-            @"Concentrate and ask again",
-            @"Unable to answer now"];
+    self.crystalBall = [[CrystalBall alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,8 +34,6 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-
-    int random = arc4random_uniform(self.predictions.count);
-    self.predictionLabel.text = [self.predictions objectAtIndex:random];
+    self.predictionLabel.text = self.crystalBall.reandomPrediction;
 }
 @end
