@@ -10,6 +10,8 @@
 
 @interface i3DViewController ()
 
+- (IBAction)buttonPressed:(id)sender;
+
 @end
 
 @implementation i3DViewController
@@ -26,4 +28,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPressed:(id)sender {
+    NSLog(@"Button Pressed");
+}
 @end
