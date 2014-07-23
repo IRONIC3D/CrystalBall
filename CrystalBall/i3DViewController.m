@@ -10,6 +10,7 @@
 
 @interface i3DViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 - (IBAction)buttonPressed:(id)sender;
 
 @end
@@ -29,6 +30,6 @@
 }
 
 - (IBAction)buttonPressed:(id)sender {
-    NSLog(@"Button Pressed");
+    self.predictionLabel.text = @"HOLA!";
 }
 @end
