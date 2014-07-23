@@ -13,7 +13,7 @@
 - (NSArray *)predictions {
     if(_predictions == nil) {
         _predictions = @[@"It is Certain",
-                @"It is Decidedly so",
+                @"It is not wize to eat a fart",
                 @"The stars are not aligned",
                 @"My reply is no",
                 @"Better not tell you now",
